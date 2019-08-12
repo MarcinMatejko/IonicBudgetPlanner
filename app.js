@@ -14,7 +14,6 @@ const clear = () => {
   amountInput.value = '';
 };
 
-
 confirmBtn.addEventListener('click', () => {
   const enteredReason = reasonInput.value;
   const enteredAmount = amountInput.value;

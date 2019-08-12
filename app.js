@@ -14,6 +14,7 @@ const clear = () => {
   amountInput.value = '';
 };
 
+
 confirmBtn.addEventListener('click', () => {
   const enteredReason = reasonInput.value;
   const enteredAmount = amountInput.value;
@@ -44,3 +45,9 @@ confirmBtn.addEventListener('click', () => {
 });
 
 cancelBtn.addEventListener('click', clear);
+
+function clearList() {
+  expensesList.innerHTML = "";
+  totalExpensesOutput.textContent = 0;
+}
+cancelAllBtn.addEventListener("click", clearList);

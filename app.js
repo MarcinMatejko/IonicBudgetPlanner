@@ -6,6 +6,9 @@ const confirmBtn = document.querySelector('#btn-confirm');
 const expensesList = document.querySelector('#expenses-list');
 const totalExpensesOutput = document.querySelector('#total-expenses');
 const alertCtrl = document.querySelector('ion-alert-controller');
+const showCard = document.querySelector('#show-card');
+
+showCard.hidden = true;
 
 let totalExpenses = 0;
 
@@ -41,6 +44,7 @@ confirmBtn.addEventListener('click', () => {
     totalExpenses += +enteredAmount;
     totalExpensesOutput.textContent = totalExpenses;
     clear();
+    showCard.hidden = false;
 });
 
 cancelBtn.addEventListener('click', clear);
@@ -48,5 +52,6 @@ cancelBtn.addEventListener('click', clear);
 function clearList() {
   expensesList.innerHTML = "";
   totalExpensesOutput.textContent = 0;
+  showCard.hidden = true;
 }
 cancelAllBtn.addEventListener("click", clearList);
